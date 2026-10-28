@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fazenda Bela Serra - Gestão de Leite e Derivados</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         TELA DE LOGIN
+    ====================================== -->
+    <div id="login-container" class="card">
+
+        <div class="header-logo">
+
+            <img
+                src="/00ef8a9c-0100-49dd-b791-71007eedcbb2.png"
+                alt="Logo da Fazenda Bela Serra"
+                class="logo-login"
+            >
+
+            <h2>Fazenda Bela Serra</h2>
+
+            <p>Gado Leiteiro &amp; Derivados — Minas Gerais</p>
+
+        </div>
+
+        <form id="login-form">
+
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Digite seu usuário (ex: admin)"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha:</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Digite sua senha (ex: 1234)"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn">
+                Entrar no Sistema
+            </button>
+
+            <div id="login-error" class="error-msg hidden"></div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================
+         PAINEL PRINCIPAL
+    ====================================== -->
+    <div id="dashboard" class="hidden">
+
+        <!-- CABEÇALHO -->
+        <header class="main-header">
+
+            <div class="header-content">
+
+                <div class="brand-header">
+
+                    <img
+                        src="/00ef8a9c-0100-49dd-b791-71007eedcbb2.png"
+                        alt="Logo da Fazenda Bela Serra"
+                        class="logo-header"
+                    >
+
+                    <h1>Fazenda Bela Serra - Painel de Controle</h1>
+
+                </div>
+
+                <div class="user-info">
+
+                    <span>
+                        Usuário:
+                        <strong id="logged-user-name">--</strong>
+                    </span>
+
+                    <button id="logout-btn" class="btn-secondary">
+                        Sair
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="container">
+
+            <!-- INFORMAÇÕES DO PROJETO -->
+            <section class="card info-card">
+
+                <h3>📌 Informações e Descrição do Projeto</h3>
+
+                <p>
+                    <strong>Nome do Projeto:</strong>
+                    Fazenda Bela Serra — Gado Leiteiro e Derivados.
+                </p>
+
+                <p>
+                    <strong>Problema Resolvido:</strong>
+                    Dificuldade no controle diário da produção e rastreabilidade
+                    de leite, queijo, manteiga e doce de leite em uma propriedade
+                    rural em Minas Gerais.
+                </p>
+
+                <p>
+                    <strong>Público-Alvo:</strong>
+                    Administradores da fazenda, gerentes de produção e equipe
+                    de controle de qualidade.
+                </p>
+
+                <p>
+                    <strong>Solução e Funções:</strong>
+                    Sistema web integrado que permite autenticação, registro
+                    dinâmico de produção, cálculo automático de totais e médias,
+                    além da classificação de qualidade dos lotes.
+                </p>
+
+                <p>
+                    <strong>Como Usar:</strong>
+                    Insira a data, o tipo de produto e a quantidade.
+                    O sistema atualizará os indicadores e a tabela em tempo real.
+                </p>
+
+            </section>
+
+
+            <!-- =====================================
+                 PRODUTOS DA FAZENDA
+            ====================================== -->
+            <section class="card products-section">
+
+                <h3>🥛 Nossos Produtos</h3>
+
+                <p class="products-description">
+                    Conheça os produtos da Fazenda Bela Serra,
+                    com qualidade e tradição em Minas Gerais.
+                </p>
+
+                <div class="products-grid">
+
+                    <!-- PRODUTO 1: LEITE -->
+                    <article class="product-card">
+
+                        <div class="product-image-container">
+
+                            <img
+                                src="/leite-de-vaca-leite-1572543062001_v2_4x3.jpg"
+                                alt="Leite Tipo A da Fazenda Bela Serra"
+                                class="product-image"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h4>Leite Tipo A</h4>
+
+                            <p>
+                                Leite para o consumo diário e preparo
+                                de diversas receitas.
+                            </p>
+
+                            <span class="product-tag">
+                                Produto lácteo
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 2: QUEIJO -->
+                    <article class="product-card">
+
+                        <div class="product-image-container">
+
+                            <img
+                                src="/D_NQ_NP_934217-MLB114604123882_082026-O-queijo-minas-zero-lactose-400g-tradicional-mineiro-caseiro.webp"
+                                alt="Queijo Artesanal da Fazenda Bela Serra"
+                                class="product-image"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h4>Queijo Artesanal</h4>
+
+                            <p>
+                                Queijo tradicional para acompanhar
+                                refeições e lanches.
+                            </p>
+
+                            <span class="product-tag">
+                                Produção artesanal
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 3: MANTEIGA -->
+                    <article class="product-card">
+
+                        <div class="product-image-container">
+
+                            <img
+                                src="/Manteiga artesanal com pão rústico.png"
+                                alt="Manteiga da Fazenda Bela Serra"
+                                class="product-image"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h4>Manteiga da Fazenda</h4>
+
+                            <p>
+                                Ideal para pães, torradas e receitas
+                                caseiras.
+                            </p>
+
+                            <span class="product-tag">
+                                Derivado do leite
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 4: DOCE DE LEITE -->
+                    <article class="product-card">
+
+                        <div class="product-image-container">
+
+                            <img
+                                src="/doce_de_leite_2-24218149.png"
+                                alt="Doce de Leite da Fazenda Bela Serra"
+                                class="product-image"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <h4>Doce de Leite</h4>
+
+                            <p>
+                                Doce cremoso inspirado nas tradicionais
+                                sobremesas mineiras.
+                            </p>
+
+                            <span class="product-tag">
+                                Doce artesanal
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 INDICADORES ESTATÍSTICOS
+            ====================================== -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h4>Volume Total Registrado</h4>
+
+                    <p id="stat-total">0</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h4>Média por Registro</h4>
+
+                    <p id="stat-media">0</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h4>Total de Lotes</h4>
+
+                    <p id="stat-qtd">0</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 REGISTRO DE PRODUÇÃO
+            ====================================== -->
+            <section class="card">
+
+                <h3>📝 Registrar Nova Produção (Leite e Derivados)</h3>
+
+                <form id="production-form" class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="data-producao">Data:</label>
+
+                        <input
+                            type="date"
+                            id="data-producao"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="produto">Produto:</label>
+
+                        <select id="produto" required>
+
+                            <option value="">Selecione...</option>
+
+                            <option value="Leite Tipo A">
+                                Leite Tipo A
+                            </option>
+
+                            <option value="Queijo Artesanal">
+                                Queijo Artesanal
+                            </option>
+
+                            <option value="Manteiga da Fazenda">
+                                Manteiga da Fazenda
+                            </option>
+
+                            <option value="Doce de Leite">
+                                Doce de Leite
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="quantidade">
+                            Quantidade (L / Unidades):
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantidade"
+                            placeholder="Ex: 350"
+                            min="1"
+                            step="0.1"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Adicionar Registro
+                    </button>
+
+                </form>
+
+                <div id="form-message" class="message hidden"></div>
+
+            </section>
+
+
+            <!-- =====================================
+                 HISTÓRICO DE PRODUÇÃO
+            ====================================== -->
+            <section class="card">
+
+                <h3>📊 Histórico de Produção e Qualidade</h3>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Data</th>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Status de Qualidade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabela-producao">
+                            <!-- Preenchido via JavaScript -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- RODAPÉ -->
+        <footer>
+
+            <p>
+                &copy; 2026 Fazenda Bela Serra -
+                Qualidade e Tradição em Minas Gerais
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="index.js"></script>
+
+</body>
+</html>
